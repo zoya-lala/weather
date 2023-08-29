@@ -1,0 +1,369 @@
+.weatherEffects {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* z-index: 1 !important; */
+}
+
+.clear {
+	background: linear-gradient(to bottom, #56ccf2, #2f80ed);
+}
+
+.clouds {
+	background: linear-gradient(to bottom, #e0eafc, #3d7dd7);
+}
+
+.rain {
+	background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+}
+
+.snow {
+	background: linear-gradient(to bottom, #e6dada, #274046);
+}
+
+.thunder {
+	background: linear-gradient(to bottom, #1f1c2c, #928dab);
+}
+
+.haze {
+	background: linear-gradient(to bottom, #f0e68c, #ffdab9);
+}
+
+.fog {
+	background: linear-gradient(to bottom, #d3cce3, #e9e4f0);
+	/* background: black; */
+}
+
+.smoke {
+	background: linear-gradient(to bottom, #a9a9a9, #696969);
+	/* background: black; */
+}
+
+.raindrop {
+	position: absolute;
+	bottom: 100%;
+	width: 2px;
+	height: 15px;
+	background-color: white;
+	animation-name: raindropFall;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.raindrop:nth-child(1) {
+	left: 10%;
+}
+
+.raindrop:nth-child(2) {
+	left: 30%;
+}
+
+.raindrop:nth-child(3) {
+	left: 50%;
+}
+
+.raindrop:nth-child(4) {
+	left: 70%;
+}
+
+.raindrop:nth-child(5) {
+	left: 90%;
+}
+
+@keyframes raindropFall {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(100%);
+		opacity: 1;
+	}
+}
+
+.snowflake {
+	position: absolute;
+	bottom: 100%;
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border-radius: 50%;
+	animation-name: snowflakeFall;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	animation-iteration-count: infinite;
+}
+.snowflake:nth-child(1) {
+	left: 10%;
+}
+.snowflake:nth-child(2) {
+	left: 30%;
+}
+.snowflake:nth-child(3) {
+	left: 50%;
+}
+.snowflake:nth-child(4) {
+	left: 70%;
+}
+.snowflake:nth-child(5) {
+	left: 90%;
+}
+@keyframes snowflakeFall {
+	from {
+		transform: translateY(-100%) translateX(-10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(100%) translateX(10px);
+		opacity: 1;
+	}
+}
+
+.cloudsContainer {
+	position: relative;
+	width: 500px;
+	height: 300px;
+}
+
+.cloud {
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 30px 20px white, 60px 10px white, 90px 40px white, 20px 30px white,
+		40px 60px white;
+}
+
+.cloud1 {
+	top: 130px; /* Set the initial position of the first cloud */
+	left: 100px;
+
+	animation-name: moveclouds1;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes moveclouds1 {
+	from {
+		transform: translateX(0) rotate(175deg);
+	}
+	to {
+		transform: translateX(100%) rotate(175deg);
+	}
+}
+
+.cloud2 {
+	top: 300px; /* Set the initial position of the second cloud */
+	left: 300px;
+
+	animation-name: moveclouds2;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes moveclouds2 {
+	from {
+		transform: translateX(0) rotate(175deg);
+	}
+	to {
+		transform: translateX(100%) rotate(175deg);
+	}
+}
+
+.flash {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.flash {
+	animation-name: flash;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+	0% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	50% {
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+/* .haze {
+	position: relative;
+	width: 100%;
+	height: 100%;
+} */
+
+.particle {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: white;
+	animation-name: particleFloat;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.particle:nth-child(1) {
+	left: 10%;
+	top: 10%;
+}
+
+.particle:nth-child(2) {
+	left: 30%;
+	top: 30%;
+}
+
+.particle:nth-child(3) {
+	left: 50%;
+	top: 50%;
+}
+
+.particle:nth-child(4) {
+	left: 70%;
+	top: 70%;
+}
+
+.particle:nth-child(5) {
+	left: 90%;
+	top: 90%;
+}
+
+@keyframes particleFloat {
+	0% {
+		transform: translateX(-50%) translateY(-50%);
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(50%) translateY(50%);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) translateY(-50%);
+		opacity: 0;
+	}
+}
+
+/* .smoke {
+	position: relative;
+	width: 100%;
+	height: 100%;
+} */
+
+.puff {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+	animation-name: puffRise;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.puff:nth-child(1) {
+	left: 10%;
+	top: 80%;
+}
+
+.puff:nth-child(2) {
+	left: 30%;
+	top: 80%;
+}
+
+.puff:nth-child(3) {
+	left: 50%;
+	top: 80%;
+}
+
+.puff:nth-child(4) {
+	left: 70%;
+	top: 80%;
+}
+
+.puff:nth-child(5) {
+	left: 90%;
+	top: 80%;
+}
+
+@keyframes puffRise {
+	0% {
+		transform: translateY(0%) scale(0.5);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-100%) scale(1.5);
+		opacity: 0;
+	}
+}
+
+.mist {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mist::before,
+.mist::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 200%;
+	height: 100%;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0.2) 0%,
+		rgba(255, 255, 255, 0.8) 50%,
+		rgba(255, 255, 255, 0.2) 100%
+	);
+}
+
+.mist::before {
+	animation: foggy1 10s ease-in-out infinite;
+}
+
+.mist::after {
+	animation: foggy2 15s ease-in-out infinite;
+}
+
+@keyframes foggy1 {
+	from {
+		opacity: 0.1;
+		filter: blur(0px);
+	}
+	to {
+		opacity: 0.3;
+		filter: blur(5px);
+	}
+}
+
+@keyframes foggy2 {
+	from {
+		opacity: 0.1;
+		filter: blur(0px);
+	}
+	to {
+		opacity: 0.3;
+		filter: blur(5px);
+	}
+}
