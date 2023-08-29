@@ -22,10 +22,6 @@ function App() {
 					exact
 				/>
 			</Routes>
-			{/* <WeatherEffects weather='Fog' /> */}
-			{/* <CurrentLocation /> */}
-			{/* <Weather /> */}
-			{/* <WeatherIcon /> */}
 		</div>
 	);
 }
